@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Main-Class: org.example.AtmApplication
+Class-Path: groovy-all-2.4.1.jar lombok-1.18.16.jar spring-boot-autoconf
+ igure-2.4.0.jar snakeyaml-1.27.jar slf4j-api-1.7.30.jar spring-boot-sta
+ rter-logging-2.4.0.jar jakarta.annotation-api-1.3.5.jar spring-boot-sta
+ rter-2.4.0.jar spring-beans-5.3.1.jar jul-to-slf4j-1.7.30.jar spring-jc
+ l-5.3.1.jar spring-boot-2.4.0.jar spring-aop-5.3.1.jar log4j-api-2.13.3
+ .jar spring-core-5.3.1.jar logback-classic-1.2.3.jar log4j-to-slf4j-2.1
+ 3.3.jar logback-core-1.2.3.jar spring-expression-5.3.1.jar spring-conte
+ xt-5.3.1.jar
+
