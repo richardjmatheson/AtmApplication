@@ -36,31 +36,34 @@ public class Account {
      * Lombok overrides to prevent lombok generated setter
      */
     @Setter(value=AccessLevel.NONE)
-    private BigDecimal balance;
+    private long balance;
 
-    public BigDecimal depositFunds(BigDecimal depositAmount) throws IllegalArgumentException {
-        if (0 > depositAmount.doubleValue()){
+    public long depositFunds(long depositAmount) throws IllegalArgumentException {
+        if (0 > depositAmount){
             throw new IllegalArgumentException("Can't deposit a negative value");
         } else {
-            balance = balance.add(depositAmount);
+            balance = balance + depositAmount;
         }
         return balance;
     }
 
-    public BigDecimal withdrawFunds(BigDecimal withdrawalAmount)  throws IllegalArgumentException {
-        if ( 0 > (balance.doubleValue() - withdrawalAmount.doubleValue())){
+    public long withdrawFunds(long withdrawalAmount)  throws IllegalArgumentException {
+        if (0 > withdrawalAmount){
+            throw new IllegalArgumentException("Can't withdraw a negative value");
+        } else if ( 0 > (balance - withdrawalAmount)){
             throw new IllegalArgumentException("Insufficient funds");
         } else {
-            balance = balance.subtract(withdrawalAmount);
+            balance = balance - withdrawalAmount;
         }
         return balance;
     }
 
+    /**
+     * Returns the balance value formatted as a dollar value with 2 decimal places.
+     * @return
+     */
     public String getBalanceAsString(){
-        double value = balance.setScale(2, RoundingMode.HALF_UP).doubleValue();
+        double value = (double)balance / 100;
         return ("$\t" + String.format("%.2f", value));
     }
-
-
-
 }

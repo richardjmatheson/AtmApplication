@@ -6,7 +6,7 @@ class AccountTest extends Specification {
 
     def "success - getBalanceAsString Test"() {
         given: "an instance of an Account object"
-        def account = new Account(444, 1234, "Sam", "Spade", 123.45)
+        def account = new Account(444, 1234, "Sam", "Spade", 12345)
 
         and: "an expected result string based on Account data"
         def expected = "\$\t123.45"
@@ -21,13 +21,13 @@ class AccountTest extends Specification {
 
     def "success - depositFunds unit test"() {
         given: "an initial balance"
-        def balance = new BigDecimal(123.45)
+        def balance = 12345
 
         and: "an instance of an Account object"
         def account = new Account(444, 1234, "Sam", "Spade", balance)
 
         and: "a positive deposit amount"
-        def depositAmount = new BigDecimal(44.22)
+        def depositAmount = 4422
 
         when: "deposit funds"
         def result = account.depositFunds(depositAmount)
@@ -40,13 +40,13 @@ class AccountTest extends Specification {
 
     def "failure - depositFunds negative value unit test"() {
         given: "an initial balance"
-        def balance = new BigDecimal(123.45)
+        def balance = 12345
 
         and: "an instance of an Account object"
         def account = new Account(444, 1234, "Sam", "Spade", balance)
 
         and: "a positive deposit amount"
-        def depositAmount = new BigDecimal(-44.22)
+        def depositAmount = -4422
 
         when: "deposit funds"
         account.depositFunds(depositAmount)
@@ -58,13 +58,13 @@ class AccountTest extends Specification {
 
     def "success - withdrawFunds unit test"() {
         given: "an initial balance"
-        def balance = new BigDecimal(123.45)
+        def balance = 12345
 
         and: "an instance of an Account object"
         def account = new Account(444, 1234, "Sam", "Spade", balance)
 
         and: "a positive deposit amount"
-        def withdrawalAmount = new BigDecimal(44.22)
+        def withdrawalAmount = 4422
 
         when: "withdraw funds"
         def result = account.withdrawFunds(withdrawalAmount)
@@ -77,13 +77,13 @@ class AccountTest extends Specification {
 
     def "failure - withdrawFunds negative value unit test"() {
         given: "an initial balance"
-        def balance = new BigDecimal(123.45)
+        def balance = 12345
 
         and: "an instance of an Account object"
         def account = new Account(444, 1234, "Sam", "Spade", balance)
 
         and: "a positive deposit amount"
-        def withdrawalAmount = new BigDecimal(-44.22)
+        def withdrawalAmount = -4422
 
         when: "withdraw funds"
         account.depositFunds(withdrawalAmount)

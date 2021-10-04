@@ -18,13 +18,13 @@ public class Accounts extends HashMap<Integer, Account> {
         Integer acctPIN;
         String fName;
         String sName;
-        BigDecimal initialBalance;
+        long initialBalance;
 
         acctNum = 1111;
         acctPIN = 1234;
         fName = "Adam";
         sName = "Adams";
-        initialBalance = new BigDecimal(1234.56);
+        initialBalance = 123456;
 
         this.put(acctNum, new Account(acctNum, acctPIN, fName, sName, initialBalance));
 
@@ -32,7 +32,7 @@ public class Accounts extends HashMap<Integer, Account> {
         acctPIN = 2345;
         fName = "Bob";
         sName = "Billings";
-        initialBalance = new BigDecimal(2345.67);
+        initialBalance = 234567;
 
         this.put(acctNum, new Account(acctNum, acctPIN, fName, sName, initialBalance));
 
@@ -40,7 +40,7 @@ public class Accounts extends HashMap<Integer, Account> {
         acctPIN = 3456;
         fName = "Carly";
         sName = "Collins";
-        initialBalance = new BigDecimal(3456.78);
+        initialBalance = 345678;
 
         this.put(acctNum, new Account(acctNum, acctPIN, fName, sName, initialBalance));
 
@@ -48,7 +48,7 @@ public class Accounts extends HashMap<Integer, Account> {
         acctPIN = 4567;
         fName = "Debbie";
         sName = "Davis";
-        initialBalance = new BigDecimal(4567.89);
+        initialBalance = 456789;
 
         this.put(acctNum, new Account(acctNum, acctPIN, fName, sName, initialBalance));
 
@@ -56,7 +56,7 @@ public class Accounts extends HashMap<Integer, Account> {
         acctPIN = 5678;
         fName = "Earl";
         sName = "Evans";
-        initialBalance = new BigDecimal(5678.90);
+        initialBalance = 567890;
 
         this.put(acctNum, new Account(acctNum, acctPIN, fName, sName, initialBalance));
     }

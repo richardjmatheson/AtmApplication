@@ -71,10 +71,14 @@ public class AccountTransactionMenuHandler {
             return account;
         }
 
-        BigDecimal bigDecimal = null;
+        Double dblDepositAmt = null;
         try {
-            bigDecimal = new BigDecimal(depositInput, new MathContext(2, RoundingMode.HALF_UP));
-            account.depositFunds(bigDecimal);
+            dblDepositAmt = new Double(depositInput);
+
+            dblDepositAmt *= 100;
+
+            long depositAmt = dblDepositAmt.longValue();
+            account.depositFunds(depositAmt);
         } catch (NumberFormatException e){
             System.out.println("Deposit input was invalid " + e.getMessage());
         } catch (IllegalArgumentException e) {
@@ -99,10 +103,15 @@ public class AccountTransactionMenuHandler {
             return account;
         }
 
-        BigDecimal bigDecimal = null;
+        Double dblWithdrawalAmt = null;
         try {
-            bigDecimal = new BigDecimal(withdrawalInput, new MathContext(2, RoundingMode.HALF_UP));
-            account.withdrawFunds(bigDecimal);
+            dblWithdrawalAmt = new Double(withdrawalInput);
+
+            dblWithdrawalAmt *= 100;
+
+            long withdrawalAmt = dblWithdrawalAmt.longValue();
+
+            account.withdrawFunds(withdrawalAmt);
         } catch (NumberFormatException e){
             System.out.println("Withdrawal input was invalid " + e.getMessage());
         } catch (IllegalArgumentException e) {
