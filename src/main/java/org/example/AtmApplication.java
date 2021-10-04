@@ -13,25 +13,14 @@ import java.io.IOException;
  * AtmApplication
  *
  */
-@SpringBootApplication
-public class AtmApplication implements CommandLineRunner
+public class AtmApplication
 {
     private static Logger logger = LoggerFactory.getLogger(AtmApplication.class);
 
     public static void main( String[] args )
     {
         logger.info("Starting ATM");
-        SpringApplication.run(AtmApplication.class, args);
-        logger.info("ATM Application finished");
-    }
 
-    @Override
-    public void run (String ... args) {
-        logger.info("Executing Command Line Runner");
-
-        for (int i = 0; i < args.length; ++i) {
-            logger.info("args[{}]: {}", i, args[i]);
-        }
         AtmMenuHandler atmMenuHandler = new AtmMenuHandler();
 
         atmMenuHandler.initializeAccountData();
@@ -40,5 +29,8 @@ public class AtmApplication implements CommandLineRunner
         } catch (IOException ioe){
             System.out.println("Caught Exception: " + ioe.getMessage());
         }
-   }
+
+
+        logger.info("ATM Application finished");
+    }
 }

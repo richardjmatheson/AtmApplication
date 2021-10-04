@@ -1,9 +1,6 @@
 package org.example.model;
 
 import lombok.*;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-
 
 @AllArgsConstructor
 @Data

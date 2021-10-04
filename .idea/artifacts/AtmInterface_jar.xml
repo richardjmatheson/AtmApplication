@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="AtmInterface:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/AtmInterface_jar</output-path>
+  <artifact type="jar" name="AtmInterface:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AtmInterface</output-path>
     <root id="archive" name="AtmInterface_jar.jar">
       <element id="archive" name="AtmInterface.jar">
         <element id="directory" name="META-INF">
