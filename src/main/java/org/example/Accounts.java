@@ -1,18 +1,21 @@
 package org.example;
 
-import org.example.model.Account;
+import org.example.model.*;
 
-import java.math.BigDecimal;
 import java.util.HashMap;
 
+/**
+ * Accounts is an extension of HashMap, providing a list of accounts
+ * the ATM can operate on.
+ * Account Number is the value used to look up accounts
+ */
 public class Accounts extends HashMap<Integer, Account> {
     /**
      * initializeAccountData provisions a hashmap of accounts for use with the Atm
+     * Five accounts are created for use in the program
      */
     public void initializeAccountData(){
 
-        // Provision sample accounts
-        Account account;
 
         Integer acctNum;
         Integer acctPIN;

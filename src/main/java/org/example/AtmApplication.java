@@ -10,27 +10,27 @@ import java.io.IOException;
 
 
 /**
- * AtmApplication
+ * AtmApplication class provides main method to launch AtmApplication logic
  *
  */
 public class AtmApplication
 {
-    private static Logger logger = LoggerFactory.getLogger(AtmApplication.class);
-
+    /**
+     * main method invoked by Java to start program logic.
+     * @param args No command line args are expected
+     */
     public static void main( String[] args )
     {
-        logger.info("Starting ATM");
+        System.out.println("Starting ATM");
 
+        // Instantiate root level ATM menu handler
         AtmMenuHandler atmMenuHandler = new AtmMenuHandler();
 
+        // Initialize canned list of accounts for ATM to operate on.
         atmMenuHandler.initializeAccountData();
-        try {
-            atmMenuHandler.doATMMenuHandler();
-        } catch (IOException ioe){
-            System.out.println("Caught Exception: " + ioe.getMessage());
-        }
+        // Start the ATM menu handler
+        atmMenuHandler.doATMMenuHandler();
 
-
-        logger.info("ATM Application finished");
+        System.out.println("ATM Application finished");
     }
 }
