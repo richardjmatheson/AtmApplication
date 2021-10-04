@@ -13,10 +13,15 @@ Use java -jar AtmApplication.jar to execute it.  Note that the jar was built usi
 There is a 'canned' Accounts collection that is provisioned when the ATM application is started up.  Note that account balances are stored as cents, rather than dollars and sense.  
 
 Acct Number | PIN   | First Name  | Surname   | Balance
+
 1111        | 1234  | Adam        | Adams     | 123456
+
 2222        | 2345  | Bob         | Billings  | 234567 
+
 3333        | 3456  | Carly       | Collins   | 345678
+
 4444        | 4567  | Debbie      | Davis     | 456789
+
 5555        | 5678  | Earl        | Evans     | 567890
 
 
